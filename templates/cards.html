@@ -1,0 +1,217 @@
+<!-- <title>Pulsuz Online Kart Sifarisi: Bank Kartlari - Plastik Kart Sifarişi</title> -->
+{% extends "layout.html" %}
+{%block head%}
+
+{{super()}}
+<link rel="stylesheet" href="{{url_for('static',filename='css/cards.css')}}">
+<link rel="stylesheet" href="{{url_for('static',filename='css/cp.css')}}">
+<link rel="stylesheet" href="{{url_for('static',filename='css/yelopremium.css')}}">
+<link rel="stylesheet" href="{{url_for('static',filename='css/yelolight.css')}}">
+{%endblock%}
+
+{% block content %}
+<br><br><br><br>
+
+<div class="container inner">
+    <div class="main-wrap">
+        <div class="cards">
+            <div class="cards-title">
+                <h1>Kartlar</h1>
+                <p>Online kart sifarişi xidməti: İndi siz evdən çıxmadan plastik kart sifariş edə bilərsiniz. Yelo
+                    Bankın
+                    təqdim etdiyi plastik kartlar ilə üstünlüklərdən yararlanmaq üçün tələsin. İstənilən yerdə
+                    istifadəsinin
+                    rahatlığı və üstünlükləri ilə Yelo Bank hesab kartları hər kəsin ürəyincə olacaq.</p><br><br>
+
+            </div>
+            {% for i in card %}
+
+            <div class="cards-list">
+
+
+                <div class="card">
+                    <div class="card-description">
+                        <div class="card-name">
+                            <h5>{{i.cardname}}</h5>
+                        </div>
+                        <div class="card-content">{{i.cardinfo}}</div>
+                        <div class="card-spec">
+                            <div class="internal-spec">
+                                <p>{{i.cardmuddet}}</p>
+                                <b>{{i.cardmuddet_m}}</b>
+
+
+                            </div>
+                            <div class="internal-spec">
+                                <p>{{i.cardvalyuta}}</p>
+                                <b>{{i.cardvalyuta_m}}</b>
+                            </div>
+                            <div class="internal-spec">
+                                <P>{{i.cardcashback}}</P>
+                                <b>{{i.cardcashback_m}}</b>
+                            </div>
+
+                        </div>
+                        <ul>
+
+                            <li><a href="/{{i.slug}}#cardpurchase" id="letsgo" class="buttoncardd"><span>Sifariş
+                                        et</span></a></li>
+                            <li><a href="/{{i.slug}}" class="buttoncardextra"><span>Daha ətraflı</span></a></li>
+                        </ul>
+
+                    </div>
+                    <div class="card-image">
+                        <div class="tilt-box-wrap">
+                            <span class="t_over"></span>
+                            <span class="t_over"></span>
+                            <span class="t_over"></span>
+                            <span class="t_over"></span>
+                            <span class="t_over"></span>
+                            <span class="t_over"></span>
+                            <span class="t_over"></span>
+                            <span class="t_over"></span>
+                            <span class="t_over"></span>
+
+                            <div class="tilt-box">
+                                <img src="{{i.cardimg}}" alt="">
+
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+
+
+            </div><br><br>
+
+            {% endfor %}
+
+            <br><br>
+
+
+            <h3>Storilər <span class="badge text-bg-warning"> <span style="color: white">3</span> </span>
+            </h3>
+
+            <div class="btn-cards">
+                <div class="row stories g-0 mb-4">
+                    <div class="col-3 " style="background-color: rgb(0, 89, 255);">
+                        <div class="row p-1">
+                            <div class="col">
+                                <a  style="width: 100%;" href="https://www.yelo.az/site/assets/files/2102/story-kredit.png"
+                                    data-fancybox="gallery"
+                                    data-caption="Xərclərini təxirə salma, hər zaman dəstək üçün Yelo Bank var">
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <h5 style="color: rgb(0, 89, 255);;">Kredit</h5>
+                                            <p>Xərclərini təxirə salma, hər zaman dəstək üçün Yelo Bank var</p>
+                                        </div>
+                                        <div class="col-5 ">
+                                            <img src="https://www.yelo.az/site/assets/files/2102/story-kredit.png"
+                                                style="background-size: cover;max-width: 100%;" alt=""></div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-1"></div>
+                    <div class="col-3 " style="background-color: rgb(224, 21, 14);">
+                        <div class="row p-1">
+                            <div class="col">
+                                <a href="https://www.yelo.az/site/assets/files/2145/stories-6.png"
+                                    data-fancybox="gallery"
+                                    data-caption="600-dən çox partnyoru özündə birləşdirən Cashback proqramı">
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <h5 style="color:rgb(224, 21, 14); ;">Cashback</h5>
+                                            <p>600-dən çox partnyoru özündə birləşdirən Cashback proqramı</p>
+                                        </div>
+                                        <div class="col-5 ">
+                                            <img src="https://www.yelo.az/site/assets/files/2145/stories-6.png"
+                                                style="background-size: cover;max-width: 100%;" alt=""></div>
+                                    </div>
+                                </a></div>
+                        </div>
+                    </div>
+                    <div class="col-1"></div>
+                    <div class="col-3 " style="background-color: rgb(10, 194, 25);">
+                        <div class="row p-1">
+                            <div class="col">
+                                <a href="https://www.yelo.az/site/assets/files/2103/stories-5-pic.png"
+                                    data-fancybox="gallery"
+                                    data-caption="Yelo Kart hər əməliyyatda rahatlıq anlayışını dəyişəcək">
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <h5 style="color: rgb(10, 194, 25);    ;">Yelo Kart </h5>
+                                            <p>Yelo Kart hər əməliyyatda rahatlıq anlayışını dəyişəcək</p>
+                                        </div>
+                                        <div class="col-5 ">
+                                            <img src="https://www.yelo.az/site/assets/files/2103/stories-5-pic.png"
+                                                style="background-size: cover;max-width: 100%;" alt=""></div>
+                                    </div>
+                                </a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="foot-text">
+                <p>Həm xərclədikcə qazanmaq, həm də kartdakı pulunuza pul gəlsin istəyirsiniz? Hansı plastik kartı
+                    seçəcəyinizə əmin deyilsinizsə, Yelo Bank-dan Yelo Kartları qarşılayın!
+
+                    Yelo Kartla xərclərinizə baxışınızı dəyişəcəksiniz. Yelo kartla rahat pul xərcləyəcəksiniz,
+                    xərclədikcə
+                    xərclərinizdən cashback qazanacaqsınız, kartınızın hesabını və bonuslarınızı rahatlıqla
+                    izləyəcəksiniz,
+                    online kart sifarişi edib, kartı əldə etdikdən sonra Yelo Karta görə partnyor mağazalarda endirim
+                    alacaqsınız. Təkcə kartın dizaynı çox şey deyir. Stereotipləri kartın dizaynında qırdıq və şaquli
+                    kart
+                    yaratdıq. Bu kartla kassada hər kəsin diqqətini özünüzdə cəmləyəcəksiniz. Yelo Kart təkcə şaquli
+                    dizaynı
+                    ilə seçilmir, <span id="dots">...</span><span id="more"> həmçinin kartın kənarının da fərqli rənginə
+                        görə pulqabınızda dərhal digər kartlardan seçiləcək! Kartın müddəti 3 ildir və kartı pulsuz əldə
+                        etmək seçiminiz də var. Kart Sifarişi zamanı üç valyutadan istənilən birini bilərsiniz.
+
+                        Yelo Premium kartı isə premium üstünlüklər deməkdir. Yüksək imtiyazlar verən Yelo Premium Kartla
+                        nəinki ölkədaxili, həm də ölkəxaricində də eksklüziv imkanlara sahib olacaqsınız. Harda
+                        olmağınızdan
+                        asılı olmayaraq Yelo Premium kartı sizi xüsusi hiss etdirməklə yanaşı gəlirinizə gəlir
+                        gətirəcək!
+                        Yelo Kartı istənilən Yelo Bank ATM-lərin komissiyasız nağdlaşdıra bilirsiniz. Geniş partnyor
+                        şəbəkəsindən 30%-dək cashback əldə etməklə cibinizi sevindirəcəksiniz! Yelo kart təmassız ödəniş
+                        funksionallığını dəstəkləyir. Kartla daha çox xərcləyin, daha çox qazanın! Online kart sifarişi
+                        xidməti ilə kartı əldə etmək imkanınız var. Yelo kartla aylıq ən azı 300 AZN və ya
+                        ekvivalentində
+                        pul xərcləyərək (onlayn və POS terminallarda alış-veriş əməliyyatları zamanı) bir çox əlavə
+                        üstünlüklər qazanmış olursunuz!
+
+                        Yelo Bank-dan nəinki debet kart, həm də Yelo Kredit kart sifarisi edə bilərsiniz. Yelo Grace
+                        Light
+                        kart ilə hər ay yalnız hesablanmış faizlər ödəməklə 10 000 AZN-ə dək kredit almaq imkanınız var.
+                        Üstəlik bu kartla bu gün xərcləyib, nə az, nə çox, 45 gün xərciniz barədə düşünməyə bilərsiniz.
+                        Kartla xərclənmiş vəsait üçün 45 gün güzəşt müddəti mövcuddur. Kartın növündən asılı olmayaraq
+                        hesabınıza 24/7 pulsuz Yelo App-də baxa bilə və bir çox ödəniş və köçürmələrinizi həyata keçirə
+                        bilərsiniz. Yelo Kart əldə etmək istəyirsiniz, lakin banka yaxınlaşmağa vaxtınız yoxdur? problem
+                        deyil, istənilən zaman istənilən yerdə onlayn kart sifarişi verə bilərsiniz! İndi siz haradan
+                        kart
+                        sifarişi edəcəyinizi yaxşı bilirsiniz.</p>
+                <button onclick="myFunction()" id="myBtn">Daha çox</button>
+            </div>
+        </div>
+
+
+    </div>
+    <br><br><br>
+    {% endblock %}
+
+    {%block script%}
+{{super()}}
+<script src="{{url_for('static',filename='js/main.js')}}"></script>
+<script src="{{url_for('static',filename='js/app.js')}}"></script>
+<script src="{{url_for('static',filename='js/yelolight.js')}}"></script>
+<script src="{{url_for('static',filename='js/cp.js')}}"></script>
+{%endblock%}
+

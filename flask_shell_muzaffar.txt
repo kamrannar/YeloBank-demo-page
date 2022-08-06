@@ -1,0 +1,38 @@
+from models import *
+
+kartlar sehifesi:
+
+card1=Cards(cardname='Yelo Light',cardinfo='Yelo kart rahatlıq anlayışını dəyişəcək - rahat xərcləyəcəksən, rahat izləyəcəksən, qazanacaqsan, endirimlər alacaqsan.',cardimg='https://www.yelo.az/site/assets/files/7800/55.png',cardmuddet='Müddət',cardmuddet_m='1 il / 3 il',cardvalyuta='Valyuta',cardvalyuta_m='AZN / USD / EUR',cardcashback='Cashback',cardcashback_m='30%-dək',slug='yelolight')
+card1.save()
+
+card2=Cards(cardname='Yelo premium',cardinfo='Yüksək statusun göstəricisi olan bu kart sahibinə yalnız Azərbaycanda deyil, hər yerdə və hər zaman eksklüziv imkanlar yaradır.',cardimg='https://www.yelo.az/site/assets/files/7856/visa-platinum.svg',cardmuddet='Müddət',cardmuddet_m='3 il',cardvalyuta='Valyuta',cardvalyuta_m='AZN / USD / EUR',cardcashback='Cashback',cardcashback_m='30%-dək',slug='yelopremium')
+card2.save()
+
+card3=Cards(cardname='Yelo Kredit Karti',cardinfo='Yelo kredit kartı - rahat xərcləmək üçün.',cardimg='https://www.yelo.az/site/assets/files/7800/55.png',cardmuddet='Məbləğ',cardmuddet_m='300 - 10 000 AZN',cardvalyuta='Güzəşt müddəti',cardvalyuta_m='45 - günədək',cardcashback='Cashback',cardcashback_m='30%-dək',slug='yelokreditkart')
+card3.save()
+
+
+
+emanetler sehifesi:
+
+emanet1=Deposits(depositname='"Parlaq Zəfər" əmanəti',depositinfo='Pulunuz sizin üçün işləsin',depositimg='https://www.yelo.az/site/assets/files/3378/shutterstock_478944469-3_1.png',depositmebleg='min. 100 AZN',depositmuddet='12 ay',depositfaiz='aylıq və ya müddətin sonunda')
+emanet1.save()
+
+emanet2=Deposits(depositname='Yelo Sabit',depositinfo='Pulunuz sizin üçün işləsin',depositimg='https://www.yelo.az/site/assets/files/6636/zefer_emaneti-isolated.png',depositmebleg='min. 100AZN/USD',depositmuddet='12 /18 /24 ay',depositfaiz='aylıq və ya müddətin sonunda')
+emanet2.save()
+
+
+emanet3=Deposits(depositname='Yelo Yığım',depositinfo='Pulunuz sizin üçün işləsin',depositimg='https://www.yelo.az/site/assets/files/3406/depositnew-pic.png',depositmebleg='100AZN/USD',depositmuddet='12 ay',depositfaiz='aylıq və ya müddətin sonunda')
+emanet3.save()
+
+
+kartin etrafli sehifesi
+
+cardextra1=CardExtra(cardname='Yelo light',cardinfo='Çoxfunksiyalı Yelo kart ilə yalnız qalıq məbləğə faiz gəliri deyil, həm də hər ödənişindən cashback qazanacaq və digər üstünlüklərindən faydalanacaqsan',cardimg='https://www.yelo.az/site/assets/files/7800/55.png')
+cardextra1.save()
+
+cardextra2=CardExtra(cardname='Yelo Premium',cardinfo='Harada olmağınızdan asılı olmayaraq yüksək statusu ilə eksklüziv imkanlar yaratmaqla yanaşı əlavə gəlir də qazandırır. Sifariş edərək bu kartın üstünlüklərini hiss edin.',cardimg='https://www.yelo.az/site/assets/files/7856/visa-platinum.svg')
+cardextra2.save()
+
+cardextra3=CardExtra(cardname='Yelo Kredit Kartı',cardinfo='Yelo Grace Light kart ilə hər ay yalnız hesablanmış faizlər ödəməklə 10 000 AZN-ə dək kredit əldə et',cardimg='https://www.yelo.az/site/assets/files/7800/55.png')
+cardextra3.save()

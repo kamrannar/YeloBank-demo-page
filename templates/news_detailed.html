@@ -1,0 +1,52 @@
+{% extends "layout.html"%}
+{%block head%}
+{%endblock%}
+{% block content%}
+<div class="row mt-5"></div>
+<div class="container  p-5">
+    <div class="row">
+        <div class="col-3"><a href="/all_news"
+                style="color: #0091FE;
+                padding: 4px 0 2px 40px;
+                background: url(	https://www.yelo.az/site/templates/style/img/back_to.svg) no-repeat left calc(50% - 2px);">Xəbərlərin siyahısı</a>
+        </div>
+        <div class="col-6">
+            <p style="    color: rgba(0,0,0,0.5);text-align: center;">Xəbərlər</p>
+        </div>
+        <div class="col-3"></div>
+    </div>
+    <div class="row ">
+        <div class="col-12">
+            <h1 style="font-size: 54px;text-align: center;">{{news.headings}}</h1>
+        </div>
+    </div>
+    <div class="row mb-5">
+        <div class="col-6"></div>
+        <div class="col-4"><time style="text-align: center;">{{news.date}}</time></div>
+        <div class="col-2 "></div>
+    </div>
+    <img style="float:left;width: 40%;height:40vh" src="{{news.image_url}}" alt="">
+    <p style="    font-size: 20px;
+        color: rgba(0,0,0,0.5);
+        line-height: 30px;
+        margin: 0 0 20px 0;
+    ">{{news.details}}</p>
+    <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+        <a class="a2a_button_facebook"></a>
+        <a class="a2a_button_twitter"></a>
+        <a class="a2a_button_email"></a>
+        <a class="a2a_button_whatsapp"></a>
+        <a class="a2a_button_telegram"></a>
+        <a class="a2a_button_linkedin"></a>
+        <a class="a2a_button_reddit"></a>
+    </div>
+</div>
+{%endblock%}
+{%block script%}
+{{super()}}
+
+<script async src="https://static.addtoany.com/menu/page.js"></script>
+<script src="{{url_for('static',filename='js/news.js')}}"></script>
+{%endblock%}
+
+</html>

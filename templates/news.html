@@ -1,0 +1,36 @@
+{% extends "layout.html"%}
+{%block head%}
+{%endblock%}
+{% block content%}
+<br><br><br><br>
+<div class="container news mt-5 ">
+  <h1 style="text-align: center;font-weight: bold;font-size: 54px; ">Xəbərlər</h1>
+  {% for i in range(4) %}
+  <div class="row mt-5 d-flex flex-row">
+    {% for j in range(3)  %}
+    <div class="col-3">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">{{news.get(3*(i+1)-j).headings}}</h5>
+          <a href="/{{news.get(3*(i+1)-j).slug}}" class="arr_bttn">Daha ətraflı</a>
+          <h6>{{news.get(3*(i+1)-j).date}}</h6>
+        </div>
+      </div>
+    </div>
+    <div class="col-1"></div>
+    {% endfor %}
+  </div>
+  {% endfor %}
+</div>
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-5"></div>
+    <div class="col-2"><button type="button" id="more_news" class="btn btn-outline-primary">Daha çox</button></div>
+    <div class="col-5"></div>
+  </div>
+</div>
+{%endblock%}
+{%block script%}
+{{super()}}
+<script src="{{url_for('static',filename='js/news.js')}}"></script>
+{%endblock%}

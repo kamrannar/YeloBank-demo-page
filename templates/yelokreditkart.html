@@ -1,0 +1,580 @@
+<!-- <title>Pulsuz Debet Kart Sifarisi: Qalıq məbləğə faiz, Ödənişdən cashback qazan</title> -->
+{% extends "layout.html" %}
+{%block head%}
+
+{{super()}}
+<link rel="stylesheet" href="{{url_for('static',filename='css/cards.css')}}">
+<link rel="stylesheet" href="{{url_for('static',filename='css/cp.css')}}">
+<link rel="stylesheet" href="{{url_for('static',filename='css/yelopremium.css')}}">
+<link rel="stylesheet" href="{{url_for('static',filename='css/yelolight.css')}}">
+{%endblock%}
+
+{% block content %}
+
+{% for i in cardextra %}
+{% if i.id==3 %}
+
+<div class="card-background">
+    <br><br>
+    <div class="container">
+        <div class="general row">
+            <div class="col-6 cardstart">
+                <h1 style="margin-bottom: 100px;">{{i.cardname}}</h1>
+                <ul>
+                    <li style="list-style: none;"><a href="#cardpurchase" class="buttoncard"><span class="test">Sifariş
+                                et</span></a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-6">
+                <div class="cardimg" style="background-image: url({{i.cardimg}});"></div>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+
+<br><br>
+<div class="container sections">
+    <button class="kh">Kart haqqında</button>
+    <button class="s">Sənədlər</button>
+    <button class="c">Sual - Cavab</button>
+</div>
+<hr><br><br>
+
+<div style="display: show;" class="karthaqqinda">
+    <div class="container starting-text">
+        <h4>{{i.cardinfo}}</h4>
+    </div><br><br>
+    {% endif %}
+    {% endfor %}
+
+    <div class="container servis">
+        <div class="row">
+            <div class="one col-3">
+                <div class="onebg"></div>
+                <p>Valyuta: AZN / USD / EUR</p>
+            </div>
+            <div class="two col-3">
+                <div class="twobg"></div>
+                <p>Müddət: 1 il / 3 il</p>
+            </div>
+            <div class="three col-3">
+                <div class="threebg"></div>
+                <p>Balansdakı qalığa gəlir illik 5% (AZN) / 0.1% (USD)</p>
+            </div>
+            <div class="forth col-3">
+                <div class="forthbg"></div>
+                <p>Partnyorlarda 30%-dək cashback</p>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="onee col-3">
+                <div class="oneebg"></div>
+                <p>Ölkədaxili hər yerdə 0.5% cashback</p>
+            </div>
+            <div class="twoo col-3">
+                <div class="twoobg"></div>
+                <p>Ölkədaxili hər yerdə 0.5% cashback</p>
+            </div>
+            <div class="threee col-3">
+                <div class="threeebg"></div>
+                <p>Qiymət: 1 illik - 10 AZN / 3 illik - 15 AZN (pulsuz almaq imkanı)</p>
+            </div>
+            <div class="forthh col-3">
+                <div class="forthhbg"></div>
+                <p></p>
+            </div>
+        </div>
+
+    </div>
+    <br><br>
+
+
+
+    <div style="width: 50%;" class="container text">
+        <h5>Pulsuz 3 illik kartı 100 AZN / 50 USD / 50 EUR ilkin mədaxil etməklə əldə edə bilərsən!*</h5><br>
+        <p>Kartın yalnız şaquli formasına görə deyil, həm də kənarının rənginə görə pul qabında digər kartlardan
+            fərqlənəcək. Tezliklə bu kartı daha çox sevəcəksən. Debet kart ilə dünyanın istənilən ölkəsində rahat
+            alış-veriş, onlayn ödənişlər edə, restoran, bilet və digər xidmətlərdən istifadə edə və ya vəsaiti rahat
+            nağdlaşdıra bilərsiniz. Həmçinin debet kart şifrəsini online pin set xidmətindən yararlanaraq təyin edə
+            bilərsiniz. Bu və daha çox üstünlüklərdən yararlanmaq üçün aşağıdakı sifariş formasından istifadə edərək
+            debet kart sifarişi edə bilərsiniz.
+            <br><br>
+            *Hal-hazırda ilkin mədaxil etməklə pulsuz kartı filialdan sifariş edə bilərsən.</p>
+    </div><br>
+
+    <div style="text-align: center;" class="container text2">
+        <h2>Hər ay seçdiyiniz kateqoriyalardan daha çox cashback qazanmaq imkanı</h2>
+    </div><br><br>
+    <div style="margin:auto" class="container cashback row">
+        <div class="bir col-3">
+            <p>Yanacaqdoldurma Məntəqələri</p>
+            <h5>4% Cashback</h5>
+        </div>
+        <div class="iki col-3">
+            <p>Kafe və Restoranlar</p>
+            <h5>4% Cashback</h5>
+        </div>
+        <div class="uc col-3">
+            <p>Geyim Mağazaları</p>
+            <h5>4% Cashback</h5>
+        </div>
+        <div class="dord col-3">
+            <p>Market və Supermarketlər</p>
+            <h5>2% Cashback</h5>
+        </div>
+    </div>
+
+</div>
+
+<div style="display:none" class="senedler">
+    <div class="container senedlerpdf">
+        <div class="row">
+            <div style="margin-right: 20px; border: 1px solid; border-color: rgba(99, 91, 91, 0.5); border-radius: 5px;"
+                class="pdf1 col-4">
+                <h5>Təhlükəsizlik qaydaları <br><br><br> <a
+                        href="https://www.yelo.az/site/assets/files/7820/antifraud_az.pdf"
+                        target="_blank">Yüklə</a><span style="color: rgba(0,0,0,0.5);"> (504 KB)</span></h5>
+            </div>
+            <div style="margin-right: 20px; border: 1px solid; border-color: rgba(99, 91, 91, 0.5); border-radius: 5px;"
+                class="pdf2 col-4">
+                <h5>Vergiyə cəlb olunan xidmətlər <br><br><br> <a
+                        href="https://www.yelo.az/site/assets/files/7820/vergil_rin_od_nisl_rin_c_lb_olunan_xidm_tl_r.pdf"
+                        target="_blank">Yüklə</a><span style="color: rgba(0,0,0,0.5);"> (464 KB)</span></h5>
+            </div>
+            <div style="margin-right: 20px; border: 1px solid; border-color: rgba(99, 91, 91, 0.5); border-radius: 5px;"
+                class="pdf3 col-4">
+                <h5>Limitlər <br><br><br> <a href="https://www.yelo.az/site/assets/files/7820/light_limit_aze.pdf"
+                        target="_blank">Yüklə</a><span style="color: rgba(0,0,0,0.5);"> (293 KB)</span></h5>
+            </div>
+        </div> <br><br>
+        <div class="row">
+            <div style="margin-right: 20px; border: 1px solid; border-color: rgba(99, 91, 91, 0.5); border-radius: 5px;"
+                class="pdf4 col-4">
+                <h5>Tariflər <br><br><br> <a href="https://www.yelo.az/site/assets/files/7820/kartlar-uzre-tarifler.pdf"
+                        target="_blank">Yüklə</a><span style="color: rgba(0,0,0,0.5);;"> (220 KB)</span></h5>
+            </div>
+            <div style="margin-right: 20px; border: 1px solid; border-color: rgba(99, 91, 91, 0.5); border-radius: 5px;"
+                class="pdf5 col-4">
+                <h5>Cashback hesablanması və qaydası <br><br><br> <a
+                        href="https://www.yelo.az/site/assets/files/7820/cashback_hesablanmasi_qaydasi.pdf"
+                        target="_blank">Yüklə</a><span style="color: rgba(0,0,0,0.5);"> (202 KB)</span></h5>
+            </div>
+            <div class="pdf6 col-4"></div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+<div style="display: none;" class="sualcavab">
+    <div class="container faq">
+        <div class="question">
+            <h3>Kart sifarişini necə edə bilərəm?</h3>
+            <svg width="15" height="10" viewBox="0 0 42 25">
+                <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round" />
+            </svg>
+
+        </div>
+        <div class="answer">
+            <dl>
+                <dt>Ödəniş kartını sifariş etməyin bir neçə yolu var:</dt>
+                <li>Sayt vasitəsilə</li>
+                <li>Yelo mobil əlavəsi vasitəsilə</li>
+                <li>Məlumat mərkəzi ilə əlaqə saxlamaq (981)</li>
+                <li><a href="www.yelo.az">Filiala</a> müraciət etmək</li>
+            </dl>
+
+        </div>
+    </div>
+    <div class="container faq">
+        <div class="question">
+            <h3>Kartımın balansını necə artıra bilərəm?</h3>
+            <svg width="15" height="10" viewBox="0 0 42 25">
+                <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round" />
+            </svg>
+
+        </div>
+        <div class="answer">
+            <dl>
+                <dt>Yelo mobil əlavəsindən</dt>
+                <li>İnternet bank xidməti ilə </li>
+                <li>Terminaldan (E-manat, Milliön, Easy Pay)</li>
+                <li>Onlayn (hesab.az, e-pul.az)</li>
+                <li><a href="www.yelo.az">Filiala</a> müraciət etmək</li>
+            </dl>
+
+        </div>
+    </div>
+    <div class="container faq">
+        <div class="question">
+            <h3>SMS bildiriş xidmətinə necə qoşula bilərəm?</h3>
+
+            <svg width="15" height="10" viewBox="0 0 42 25">
+                <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round" />
+            </svg>
+
+        </div>
+        <div class="answer">
+            <p>Kartı ATM-ə daxil edərək əsas menyuda “Xidmətlər” , oradan isə “SMS NOTIFICATIONS” bölməsinə daxil olmaq
+                lazımdır. İki dəfə mobil telefon nömrəsi daxil edildikdən sonra xidmətə qoşulmaqla bağlı SMS gəlir.
+
+                Qeyd: Xidmətdən aylıq istifadə haqqı 1.20 AZN təşkil edir"</p>
+
+
+        </div>
+    </div>
+    <div class="container faq">
+        <div class="question">
+            <h3>Kartımın limitlərinə necə baxa və dəyişə bilərəm?</h3>
+            <svg width="15" height="10" viewBox="0 0 42 25">
+                <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round" />
+            </svg>
+
+        </div>
+        <div class="answer">
+            <p>Kart üzrə mövcud limitlərin izlənilməsi və dəyişilməsi üçün Yelo mobil tətbiqindən istifadə etmək və ya
+                filiala yaxınlaşmaq lazımdır.
+
+                Limitlər (pdf)</p>
+
+
+        </div>
+    </div>
+    <div class="container faq">
+        <div class="question">
+            <h3>"Surcharge" komissiyası nə deməkdir?</h3>
+            <svg width="15" height="10" viewBox="0 0 42 25">
+                <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round" />
+            </svg>
+
+        </div>
+        <div class="answer">
+            <p>Kartın məxsus olduğu bankın mövcud komissiyasından əlavə qarşı tərəfin tətbiq edə biləcəyi əlavə
+                komissiya haqqı "surcharge" adlanır. Məsələn, Yelo banka məxsus kartdan Azərikard xarici, ölkə daxili
+                bankomatlarda nağdlaşdırma bankın tariflərinə əsasən 2% (min. 3 AZN / USD / EUR ) təşkil etdiyi halda,
+                bankomatın məxsus olduğu bank da müştəridən nağdlaşdırmaya görə əlavə komissiya tuta bilər. Digər bank
+                tərəfindən tutulan həmin əlavə komissiya isə "surcharge" komissiyasıdır. "Surcharge" komissiyası tətbiq
+                olunacağı halda müştər bu barədə məlumatlandırılır.Kartı ATM-ə daxil edərək əsas menyuda “Xidmətlər” ,
+                oradan isə “SMS NOTIFICATIONS” bölməsinə daxil olmaq lazımdır. İki dəfə mobil telefon nömrəsi daxil
+                edildikdən sonra xidmətə qoşulmaqla bağlı SMS gəlir.
+
+                Qeyd: Xidmətdən aylıq istifadə haqqı 1.20 AZN təşkil edir"</p>
+
+
+        </div>
+    </div>
+    <div class="container faq">
+        <div class="question">
+            <h3>Avtorizasiya kodu nə deməkdir?</h3>
+            <svg width="15" height="10" viewBox="0 0 42 25">
+                <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round" />
+            </svg>
+
+        </div>
+        <div class="answer">
+            <p>Avtorizasiya kodu ödəniş kartı üzrə aparılan hər əməliyyatı identifikasiya edən unikal koddur. Həmin kod
+                təqdim olunan qəbzdə 6 simvollu formada öz əksini tapır.</p>
+
+
+        </div>
+    </div>
+
+</div>
+
+
+<br><br>
+
+
+<div class="container sontext">
+    <p>Kredit kartın yalnız şaquli formasına görə deyil, həm də kənarının rənginə görə pul qabında digər kartlardan
+        fərqlənəcək. Tezliklə bu krediti kartını daha çox sevəcəksən.</p>
+</div><br><br>
+
+
+<div class="container purchase">
+    <h5 id="cardpurchase"><b>Yelo kart əldə etmək üçün 3 sadə addım</b></h5><br>
+    <div class="steps">
+
+        <ul>
+            <li><span>1</span>
+                <p>Online sifariş formasını doldur</p>
+            </li>
+            <li><span>2</span>
+                <p>Filialdan götür</p>
+            </li>
+            <li><span>3</span>
+                <p>Kartın istifadəsindən zövq al</p>
+            </li>
+        </ul>
+        <br><br>
+        <h3>Yelo Kredit kartı sifariş et</h3>
+
+    </div> <br><br>
+
+
+</div>
+
+<form action="" method="post">
+    {{ form.csrf_token }}
+
+    <div class="container">
+        <div class="form">
+            <div class="form-floating">
+                {{form.cardtype(class='form-select')}}
+
+            </div><br>
+
+            <div class="row">
+                <div class="col">
+                    <!-- <input type="text" class="form-control" placeholder="Maaş" aria-label="Maaş"> -->
+                    {{form.salary(class='form-control')}}
+
+                </div>
+                <div class="col">
+                    <!-- <input type="text" class="form-control" placeholder="Kredit Məbləği" aria-label="Kredit Məbləği"> -->
+                    {{form.amount(class='form-control')}}
+
+                </div>
+            </div>
+
+            <br>
+            <div class="row">
+                <div class="col">
+                    <!-- <input type="text" class="form-control" placeholder="Ad" aria-label="Ad"> -->
+                    {{form.name(class='form-control')}}
+
+                </div>
+                <div class="col">
+                    <!-- <input type="text" class="form-control" placeholder="Soyad" aria-label="Soyad"> -->
+                    {{form.surname(class='form-control')}}
+
+                </div>
+            </div> <br><br>
+            <div class="row g-3">
+                <div class="col-sm">
+                    <!-- <input type="tel" class="form-control" placeholder="İş yeri" aria-label="İş yeri"> -->
+                    {{form.work(class='form-control')}}
+
+                </div>
+                <div class="col-sm">
+                    <!-- <select class="form-select" aria-label="Default select example">
+                        <option selected>Prefiks</option>
+                        <option value="1">050</option>
+                        <option value="2">051</option>
+                        <option value="3">055</option>
+                        <option value="4">070</option>
+                        <option value="5">077</option>
+                        <option value="6">099</option>
+                        <option value="7">010</option>
+    
+                    </select> -->
+                    {{form.prefix(class='form-select')}}
+
+                </div>
+                <div class="col-sm">
+                    <!-- <input type="tel" class="form-control" placeholder="Mobil nömrə" aria-label="mobil nomre"> -->
+                    {{form.number(class='form-control')}}
+
+                </div>
+            </div> <br><br>
+
+            <div class="sv row">
+                <div class="col-6">
+                    <div class="row">
+                        <div class="col-6"><i class="fa fa-upload text-primary m-3 mt-0 mb-0"
+                                style="font-size:24px;"></i></div>
+                        <div class="col-6">
+                            <p>Ş.V-nin ön tərəfi</p>
+                        </div>
+                    </div><br>{{form.idcardfront}}
+                </div>
+                <div class="col-6">
+                    <div class="row">
+                        <div class="col-6"><i class="fa fa-upload text-primary m-3 mt-0 mb-0"
+                                style="font-size:24px;"></i></div>
+                        <div class="col-6">
+                            <p>Ş.V-nin arxa tərəfi</p>
+                        </div>
+                    </div><br>{{form.idcardback}}
+                </div>
+            </div>
+
+            <!-- <div class="form-row mt-3 d-flex flex-row justify-content-between">
+                <div class="form-group id-card d-flex flex-row align-items-center justify-content-center ">
+                    <label for="inputPassword3"><i class="fa fa-upload text-primary m-3 mt-0 mb-0"
+                            style="font-size:24px;"></i></label>
+                    <p class="text-primary h6 mt-1 mb-0 m-5 ">Ş.V.-in ön tərəfi</p>
+                    <input type="file" class="form-control border " id="inputPassword3" style="display: none;">
+                </div>
+                <div class="form-group id-card   d-flex flex-row align-items-center justify-content-center ">
+                    <label for="inputPassword4"><i class="fa fa-upload text-primary m-3 mt-0 mb-0"
+                            style="font-size:24px;"></i></label>
+                    <p class="text-primary h6 mt-1 mb-0 m-5">Ş.V.-in arxa tərəfi</p>
+                    <input type="file" class="form-control border " id="inputPassword4" style="display: none;">
+                </div>
+            </div> -->
+            <br><br><br>
+            <div class="form-end">
+                <div class="row">
+                    <div class="col-6 end-title">
+                        <p>Şəxsi məlumatlaramın istifadəsinə etiraz etmirəm.</p>
+                    </div>
+                    <div class="col-6">
+                        <button class="endsubmit btn btn-warning btn-large">Sifariş et</button>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+</form>
+
+<br><br><br>
+
+<div class="container">
+
+    <h3>Storilər <span class="badge text-bg-warning"> <span style="color: white">3</span> </span>
+    </h3>
+
+    <div class="btn-cards">
+        <div class="row stories g-0 mb-4">
+            <div class="col-3 " style="background-color: rgb(0, 89, 255);">
+                <div class="row p-1">
+                    <div class="col">
+                        <a href="https://www.yelo.az/site/assets/files/2102/story-kredit.png" data-fancybox="gallery"
+                            data-caption="Xərclərini təxirə salma, hər zaman dəstək üçün Yelo Bank var">
+                            <div class="row">
+                                <div class="col-7">
+                                    <h5 style="color: rgb(0, 89, 255);;">Kredit</h5>
+                                    <p>Xərclərini təxirə salma, hər zaman dəstək üçün Yelo Bank var</p>
+                                </div>
+                                <div class="col-5 ">
+                                    <img src="https://www.yelo.az/site/assets/files/2102/story-kredit.png"
+                                        style="background-size: cover;max-width: 100%;" alt=""></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-1"></div>
+            <div class="col-3 " style="background-color: rgb(224, 21, 14);">
+                <div class="row p-1">
+                    <div class="col">
+                        <a href="https://www.yelo.az/site/assets/files/2145/stories-6.png" data-fancybox="gallery"
+                            data-caption="600-dən çox partnyoru özündə birləşdirən Cashback proqramı">
+                            <div class="row">
+                                <div class="col-7">
+                                    <h5 style="color:rgb(224, 21, 14); ;">Cashback</h5>
+                                    <p>600-dən çox partnyoru özündə birləşdirən Cashback proqramı</p>
+                                </div>
+                                <div class="col-5 ">
+                                    <img src="https://www.yelo.az/site/assets/files/2145/stories-6.png"
+                                        style="background-size: cover;max-width: 100%;" alt=""></div>
+                            </div>
+                        </a></div>
+                </div>
+            </div>
+            <div class="col-1"></div>
+            <div class="col-3 " style="background-color: rgb(10, 194, 25);">
+                <div class="row p-1">
+                    <div class="col">
+                        <a href="https://www.yelo.az/site/assets/files/2103/stories-5-pic.png" data-fancybox="gallery"
+                            data-caption="Yelo Kart hər əməliyyatda rahatlıq anlayışını dəyişəcək">
+                            <div class="row">
+                                <div class="col-7">
+                                    <h5 style="color: rgb(10, 194, 25);    ;">Yelo Kart </h5>
+                                    <p>Yelo Kart hər əməliyyatda rahatlıq anlayışını dəyişəcək</p>
+                                </div>
+                                <div class="col-5 ">
+                                    <img src="https://www.yelo.az/site/assets/files/2103/stories-5-pic.png"
+                                        style="background-size: cover;max-width: 100%;" alt=""></div>
+                            </div>
+                        </a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="container sontext">
+    <hr>
+    <p>
+        Kredit karti sifarisi <br>
+
+        Endirimlər gözləmir, maaşa isə hələ çox var? Yelo Bank-dan kredit karti sifarisi edin, endirimlərdən isti-isti
+        faydalanın! Yelo Bank müştəriləri 10000 manatadək kredit vəsaiti olan Yelo kredit kartini sifaris etməklə
+        alış-veriş etmək, ödəniş və köçürmələr həyata keçirmək, cashback qazanmaq kimi fürsətlərə malikdirlər. Yelo
+        kredit karti online sifarislə pulsuz çatdırılır. Həm rəsmi veb-saytdan, həm də Yelo App mobil tətbiqini
+        yükləməklə kredit kartı sifarişini gerçəkləşdirə bilərsiniz.
+
+        <br><br> Kredit karti <br>
+        Yelo Bank alış-veriş üçün maaş gününü gözləmirlər, çünki onların Yelo Kredit karti var! Yelo kredit kartinin
+        əsas üstünlüklərindən biri 45 günədək güzəşt müddətidir. Kredit kartini sifariş etməklə 10000 AZN-dək kredit
+        vəsaiti əldə edə bilərsiniz. Yelo Kredit kartına pulsuz sahib olmaq da mümkündür. Kredit kartının xərc və
+        balansını pulsuz Yelo App mobil əlavəsində 24/7 izləyə bilərsiniz. Kredit kartindakı qalığa da hər ay faiz
+        gəliri əldə edirsiniz!
+
+        <br><br> Kredit karti nedir? <br>
+        Kredit karti nedir və niyə ona ehtiyacımız var? Kredit karti xüsusilə alış-veriş zamanı istifadə olunan bank
+        məhsuludur. Cibinizdə pul olmasına baxmayaraq kredit kartının köməyi ilə alış-veriş etməklə yanaşı
+        xərclədiyinizi müəyyən güzəşt müddətindən sonra geri qaytara bilərsiniz. Bu günümüzdə kredit kartinin bu qədər
+        populyar olmasının əsas səbəbi də budur. Kredit kartı sayəsində əslində hesabınızda olmayan vəsaiti
+        xərcləyirsiniz, debit kartdan fərqli olaraq. Yelo Kredit kartı üstün alış-veriş təcrübəsi deməkdir.
+
+       <br> <br> Kredit karti nece almaq olar? <br>
+        Kredit karti nağd vəsaiti kredit şəklində xərcləməyə imkan verən populyar bank məhsuludur. Kredit karti nece
+        almaq olar? Kredit kartını almaq indi daha əziyyətsiz və onlayn qaydada həyata keçirilir. Kredit kartını online
+        almaq zövqünü Yelo Bank-la daha parlaq yaşayın. 10000 manatadək Yelo kredit kartinin onlayn sifarişlə və ünvana
+        pulsuz çatdırılma ilə almaq mümkündür. Xərclənmiş kredit vəsaitini karta 45 günə qədər geri ödəyə bilərsiniz.
+        Kredit karti ilə alış-veriş etmək nağd alış-verişdən daha təhlükəsiz və pul itkisi ehtimalı daha aşağıdır.
+
+        <br><br> Kredit karti veren banklar <br>
+        Kredit karti veren banklar hansılardır? Sərfəli təklifləri gözdən keçir, müqayisə et və qərar ver! Kredit karti
+        verən banklar arasında Yelo Bank daha parlaq təkliflər irəli sürür. Kredit karti üçün maksimal məbləğ 10000
+        AZN-dir, bu vəsaitlə təcili ehtiyacları əldə etmək çox rahat olacaq, üstəlik kredit ödənişini geri qaytarmaq
+        üçün 45 günə qədər zamanınız var. Kredit kartı sizə həm də çox qazandıracaq: hər yerdən cashback, partnyorlardan
+        ekstra 30%-dək cashback, depozitdəki kimi qalıq məbləğə hər ay gəlir!
+
+        <br><br> Serfeli kredit kartlari <br>
+        Təcili pula ehtiyacınız var, lakin hal-hazırda nağd vəsaitiniz yoxdursa, belə olan halda kredit kartlari
+        köməyinizə çatar. Bəs daha serfeli kredit kartlari hansılardır? Haradan kredit kartı əldə etməklə daha qazanclı
+        ola bilərsiniz? Serfeli Kredit kartı təklif edən banklar çoxdur, lakin Yelo Bank-ın təklifinin bənzəri yoxdur.
+        Kredit kartını həm sərfəli şərtlərlə əldə etməklə qalmayacaqsınız, həm də xərclədikcə əlavə pul qazanacaqsınız.
+        Günümüzdə cashback, qalır gəlirə faiz təklif edən serfeli kredit kartina rast gəlmək müşküldür. Lakin Yelo
+        Kredit kartı üstünlükləri ilə bunu mümkün etdi!
+
+        <br><br> Pulsuz kart sifarisi <br>
+        Elə bir kredit kartı olsun ki, pulsuz sifarisle əldə etmək olsun, həm də cashback qazandırsın, hələ bu da azmış
+        kimi kartdakı qalığa hər ay pul gəlsin? Elə bir kredit kartını Yelo Bank-dan sifaris etmək mümkündür! Yelo
+        Kredit kartını həm online sifarisle əldə etməklə yanaşı, ünvana çatdırılma ilə pulsuz təhvil də ala bilərsiniz.
+        Günümüzdə bu qədər üstünlüklərə malik kredit kartını pulsuz sifariş etmək nadir rast gəlinən fürsətdir. Yelo
+        Bank-ın kredit karti sizə parlaq alış-veriş təcrübəsi yaşadacaq.
+
+        <br><br> Kredit karti almaq <br>
+        Kredit karti almaq istəsəniz Yelo Bank qulluğunuzda! Kredit kartini almağın bir çox üsulu var: saytdan onlayn
+        sifariş, mobil tətbiqdən onlayn müraciət və ya ən yaxın Yelo filialına yaxınlaşmaqla. Seçim sizindir, Yelo
+        Kredit kartı alıb, almamaq arasında qalsanız, üstünlüklərimizə nəzər yetirin: 45 günə qədər xərclənmiş kredit
+        vəsaitini geri ödəmək şansı, kartı pulsuz almaq seçimi, geniş partnyor şəbəkəsindən cashbacklər+bütün
+        ödənişlərdən cashback, qalığa aylıq gəlir və daha nələr, nələr! </p>
+</div><br><br>
+{% endblock %}
+
+{%block script%}
+{{super()}}
+<script src="{{url_for('static',filename='js/main.js')}}"></script>
+<script src="{{url_for('static',filename='js/app.js')}}"></script>
+<script src="{{url_for('static',filename='js/yelolight.js')}}"></script>
+<script src="{{url_for('static',filename='js/cp.js')}}"></script>
+{%endblock%}

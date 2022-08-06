@@ -1,0 +1,602 @@
+a {
+    color: #0091FE;
+    text-decoration: none;
+}
+
+.slider_background h1 {
+    position: absolute;
+    font-size: 40px;
+    top: 50px;
+    left: 100px;
+    padding-top: 60px;
+    padding-left: 10px;
+}
+
+.card-img-top {
+    width: 280px;
+    height: 180px;
+}
+
+.slider_background h4 {
+    left: 100px;
+    position: absolute;
+    top: 190px;
+    left: 220px;
+    display: inline-block;
+    padding: 5px;
+}
+
+.carousel-item .row {
+    height: 400px;
+}
+
+.more_info{
+    position: absolute;
+    bottom: 25px;
+    left: 270px;
+    text-decoration: none;
+}
+
+.card_order {
+    position: absolute;
+    bottom: 70px ;
+    left: 200px;
+    padding: 15px 60px 15px 60px;
+    display: inline-block;
+    background-color: black;
+    color: white;
+}
+
+
+.card_order h6 {
+    font-weight: bold;
+    transform: skew(17deg);
+}
+
+.col-7 h5 {
+    border-radius: 10px;
+    background-color: white;
+    text-align: center;
+    padding: 5px;
+    margin-top: 3px;
+    width: 50%;
+    background-size: 120%;
+}
+
+
+.col-7 p,
+.col-7 h5 {
+    color: white;
+    font-size: 12px;
+}
+
+.exchange_rate {
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.col-content {
+    border-radius: 10px;
+    border: 1px solid #ECECEC;
+    height: 100%;
+    overflow: hidden;
+}
+
+.cc_title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cc_title b {
+    font-size: 22px;
+    font-family: 'b';
+}
+
+.change_rates {
+    position: relative;
+    padding: 5px 0 0 0;
+}
+
+.change_rates .select_box {
+    transform-origin: right top;
+    left: auto;
+    right: 0px;
+}
+
+.select_box {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: #FFFFFF;
+    box-shadow: 0 2px 14px 0 rgb(0 0 0 / 17%);
+    text-align: left;
+    z-index: 9;
+    transform-origin: left top;
+    transform: scale(0);
+    opacity: 0;
+    transition: all 0.2s cubic-bezier(1.000, 0.000, 0.000, 1.000);
+    visibility: hidden;
+    border-radius: 5px;
+    padding: 10px 0;
+}
+
+ul {
+    list-style: none;
+}
+
+.select_box li {
+    padding: 0px;
+    margin: 0px;
+    display: block;
+}
+
+.select_box li a.active {
+    color: black;
+}
+
+.select_box li a {
+    padding: 0 20px;
+    color: rgba(0, 0, 0, 0.5);
+    display: block;
+    white-space: nowrap;
+}
+
+.c_line {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 3px solid #FFC628;
+    padding: 10px 0 0 0;
+}
+
+.c_int {
+    font-size: 25px;
+    font-family: 'b';
+    width: 100%;
+    height: 40px;
+}
+
+
+.c_result {
+    display: flex;
+    justify-content: space-between;
+    margin: 25px 0 0 0;
+}
+
+.cr_item {
+    width: 33.333%;
+}
+
+.cr_item p {
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.info_p {
+    padding: 10px 0 0;
+    color: rgba(0, 0, 0, 0.9);
+    font-size: 14px;
+}
+
+.all_exchanges {
+    border-top: 1px solid #ECECEC;
+    display: block;
+    margin: 15px -30px -30px;
+    padding: 17px 30px;
+    font-family: 'b';
+    background: url(https://www.yelo.az/site/templates/style/img/blue_arr.svg) no-repeat 91% 21px;
+    transition: all .2s cubic-bezier(.52,.01,.16,1);
+}
+
+.col_content {
+    border-radius: 10px;
+    border: 1px solid #ECECEC;
+    height: 100%;
+    overflow: hidden;
+}
+
+.loan_calculator {
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.cc_title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cc_title b {
+    font-size: 22px;
+    font-family: 'b';
+}
+
+.arr_bttn {
+    background: url('	https://www.yelo.az/site/templates/style/img/blue_arr.svg') no-repeat right 9px;
+    display: inline-block;
+    font-family: 'b';
+    padding: 5px 38px 5px 0;
+    color: #0091FE;
+    transition: all 0.2s cubic-bezier(.52, .01, .16, 1);
+}
+
+.lc_inputs {
+    height: 70px;
+    border: 1px solid #E7E7E7;
+    border-radius: 10px 10px 10px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.lc_item {
+    padding: 10px 10px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.lc_salary {
+    width: 100%;
+    border-right: 1px solid #E7E7E7;
+}
+
+.lc_item p {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 15px;
+    line-height: 15px;
+    display: block;
+    margin: 0 0 4px 0;
+}
+
+.range_result {
+    font-size: 26px;
+    line-height: 26px;
+    width: 100%;
+}
+
+input[type="number"] {
+    border: none !important;
+    width: 100% !important;
+}
+
+.lc_c {
+    position: absolute;
+    font-family: 'b';
+    font-size: 15px;
+    /* text-transform: uppercase; */
+    text-transform: capitalize;
+    color: rgba(0, 0, 0, 0.5);
+    right: 17px;
+    bottom: 20px;
+    line-height: 15px;
+}
+
+input[type="range" i] {
+    appearance: auto;
+    cursor: default;
+    color: rgb(157, 150, 142);
+    padding: initial;
+    border: initial;
+    margin: 2px;
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    --range: calc(var(--max) - var(--min));
+    --ratio: calc((var(--val) - var(--min))/var(--range));
+    --sx: calc(.5*1.5em + var(--ratio)*(100% - 1.5em));
+}
+
+.lc_amount {
+    box-sizing: border-box;
+    border-right: 1px solid #E7E7E7;
+}
+
+.lc_term {
+    width: 210px;
+}
+
+.lc_result {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 45px 0 0 0;
+}
+
+.lc_r_self {
+    width: calc(100% - 50px);
+    display: flex;
+    justify-content: space-between;
+}
+
+.lc_result .yelo_bttn {
+    width: 210px;
+}
+
+.lc_r_item {
+    width: 50%;
+}
+
+.lc_r_item p {
+    color: rgba(0, 0, 0, 0.5);
+    line-height: 16px;
+}
+
+.lc_r_item b {
+    font-size: 26px;
+    font-family: 'm';
+}
+
+.lc_r_item span {
+    font-size: 18px;
+}
+
+.slider_background h1,
+.slider_background h4 {
+    transform: skew(12.7deg, 0);
+    color: #000;
+}
+
+.slider_images {
+    top: 0px;
+    right: 0px;
+    width: 120%;
+    height: 100%;
+    background-size: 100%;
+    background-position: center;
+}
+
+.carousel-control-prev-icon {
+    position: absolute;
+    z-index: 200;
+}
+
+.slider_background {
+    margin-left: -40px;
+    background-color: #FFC628;
+    transform: skew(-12.7deg, 0);
+}
+
+.slider_images {
+    margin-left: -40px;
+    background-size: cover;
+}
+
+.stories .col-3 {
+    border-radius: 10px;
+}
+
+.story_images{
+    width: 100px;
+    height:100%
+}
+
+.story_background_1 {
+    background-color: #0071C7
+}
+
+.story_background_2 {
+    background-color: #D82A34
+}
+
+.story_background_3 {
+    background-color: #81BD5B
+}
+
+.story_content1 h5 {
+    color: #0071C7;
+}
+
+.story_content2 h5 {
+    color: #D82A34;
+}
+
+.story_content3 h5 {
+    color: #81BD5B;
+}
+
+.c_b_desc {
+    width: 50%;
+    padding: 30px 0 30px 30px;
+    box-sizing: border-box;
+}
+
+.cb_b {
+    font-family: 'b';
+    font-size: 22px;
+    display: block;
+}
+
+.cb_p {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.cb_is {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0 25px 0;
+}
+
+.cb_item {
+    width: 50%;
+}
+
+.cb_item p {
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.cb_item b {
+    font-size: 22px;
+    font-family: 'm';
+}
+
+.c_b_desc .yelo_bttn {
+    width: 200px;
+}
+
+.card_3d {
+    
+    width: 190px;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    top: 30px;
+    right: 40px;
+    box-shadow: 50px 60px 80px rgb(0 0 0 / 20%);
+    border-radius: 10px;
+    transition: all 0.4s cubic-bezier(.52, .01, .16, 1);
+}
+
+.hovered {
+    background: #000 !important;
+    color: #fff !important;
+}
+
+.app_block {
+    background: url(img/app_block.svg) no-repeat right center;
+    background-size: contain;
+    position: relative;
+}
+
+.app_image {
+    width: 50%;
+    bottom: 0px;
+    right: 30px;
+    position: absolute;
+    height: 115%;
+    overflow: hidden;
+}
+
+.app_phone {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background-size: contain;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-image: url('	https://www.yelo.az/site/templates/style/img/app_phone.png');
+    z-index: 2;
+}
+
+.app_self {
+    width: 250px;
+    height: 375px;
+    position: absolute;
+    left: 95px;
+    /* top: 46px; */
+    bottom: 0;
+    background-size: cover;
+    background-color: #ffc629;
+}
+
+.app_b_desc {
+    padding: 45px;
+    width: 50%;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 2;
+    height: 100%;
+}
+
+.app_b {
+    font-family: 'b';
+    font-size: 34px;
+    line-height: 34px;
+    margin: 0 0 10px 0;
+    display: block;
+}
+
+.app_p {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 18px;
+    line-height: 26px;
+}
+
+.app_b_desc ul {
+    width: 100%;
+    height: 55px;
+    border-radius: 5px;
+    border: 1px solid #ECECEC;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 45px;
+    background: white;
+    padding-left: 0;
+}
+
+.app_b_desc li {
+    width: 33%;
+}
+
+.app_b_desc li a {
+    display: block;
+    padding: 0 6px;
+    white-space: nowrap;
+}
+
+.app_b_desc span {
+    opacity: 0.5;
+    font-size: 12px;
+    color: #505050;
+}
+
+.app_b_desc li p {
+    opacity: 0.5;
+    font-family: 'm';
+    font-size: 16px;
+    color: #505050;
+    letter-spacing: -0.4px;
+    line-height: 9px;
+}
+
+.apple div {
+    background: url(https://www.yelo.az/site/templates/style/img/apple.svg
+) no-repeat left 11px;
+    display: block;
+    padding: 6px 0 6px 34px;
+}
+
+.google_play div {
+    background: url(https://www.yelo.az/site/templates/style/img/google_play.svg) no-repeat left 13px;
+    display: block;
+    padding: 6px 0 6px 34px;
+}
+
+.huawei_play div {
+    background: url(https://www.yelo.az/site/templates/style/img/huawei_play.svg) no-repeat left 14px;
+    background-size: 24px;
+    display: block;
+    padding: 6px 0 6px 30px;
+}
+
+.app_self {
+    background-image: url(https://www.yelo.az/site/assets/files/1752/screen_app.jpg);
+}
+
+.app_block {
+    background-image: url(https://www.yelo.az/site/templates/style/img/app_block.svg);
+}
+
+
+.loan_calc {
+    padding: 30px 0 0 0;
+}
+
+.more_info{
+    background: url(	https://www.yelo.az/site/templates/style/img/bl_arr_bttn.svg) no-repeat right center;
+    display: block;
+    padding: 0 45px 0 0;
+    font-weight: bold;
+    transition: all 0.2s cubic-bezier(.52, .01, .16, 1);
+    color: black;
+}
+
+.slider_images {
+    flex: 0 0 auto;
+    width: 45.767667% !important;
+}
